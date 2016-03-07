@@ -12,4 +12,13 @@ describe 'Queue Class' do
       expect{ 6.times{|index| queue.add(index) } }.to raise_error(Exception)
     end
   end
+
+  describe '.get' do
+    it 'should get the front item of queue' do
+      queue.add(1)
+      queue.add(2)
+      queue.add(3)
+      expect(queue.get).to eq(1)
+    end
+  end
 end
