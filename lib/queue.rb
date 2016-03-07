@@ -11,6 +11,10 @@ class Queue
     @list.push(number)
   end
 
+  def get
+    @list.shift
+  end
+
   def list
     @list
   end
