@@ -16,6 +16,10 @@ class Queue
     @list.shift
   end
 
+  def view
+    @list.first
+  end
+
   def list
     @list
   end
