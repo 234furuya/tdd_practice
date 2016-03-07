@@ -20,5 +20,9 @@ describe 'Queue Class' do
       queue.add(3)
       expect(queue.get).to eq(1)
     end
+
+    it 'should return Error if get nothing' do
+      expect{ queue.get }.to raise_error(Exception)
+    end
   end
 end
