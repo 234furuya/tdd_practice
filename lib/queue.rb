@@ -12,6 +12,7 @@ class Queue
   end
 
   def get
+    raise Exception if @list.empty?
     @list.shift
   end
 
