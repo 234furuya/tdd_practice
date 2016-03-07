@@ -17,6 +17,7 @@ class Queue
   end
 
   def view
+    raise Exception if @list.empty?
     @list.first
   end
 

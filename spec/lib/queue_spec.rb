@@ -33,5 +33,9 @@ describe 'Queue Class' do
       queue.add(3)
       expect(queue.view).to eq(1)
     end
+
+    it 'should return Error if view nothing' do
+      expect{ queue.view }.to raise_error(Exception)
+    end
   end
 end
