@@ -3,6 +3,11 @@ require 'queue'
 
 describe 'Queue Class' do
   let(:queue) { Queue.new }
+  let(:add_queue) {
+    queue.add(1)
+    queue.add(2)
+    queue.add(3)
+  }
   describe '.add' do
     it 'should add an item to queue' do
       expect{ queue.add(1) }.to change(queue.list, :length).by(1)
@@ -15,9 +20,7 @@ describe 'Queue Class' do
 
   describe '.get' do
     it 'should get the front item of queue' do
-      queue.add(1)
-      queue.add(2)
-      queue.add(3)
+      add_queue
       expect(queue.get).to eq(1)
       expect(queue.list).to eq([2,3])
     end
@@ -29,9 +32,7 @@ describe 'Queue Class' do
 
   describe '.view' do
     it 'should view the front item of queue' do
-      queue.add(1)
-      queue.add(2)
-      queue.add(3)
+      add_queue
       expect(queue.view).to eq(1)
       expect(queue.list).to eq([1,2,3])
     end
