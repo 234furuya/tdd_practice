@@ -19,6 +19,7 @@ describe 'Queue Class' do
       queue.add(2)
       queue.add(3)
       expect(queue.get).to eq(1)
+      expect(queue.list).to eq([2,3])
     end
 
     it 'should return Error if get nothing' do
@@ -32,6 +33,7 @@ describe 'Queue Class' do
       queue.add(2)
       queue.add(3)
       expect(queue.view).to eq(1)
+      expect(queue.list).to eq([1,2,3])
     end
 
     it 'should return Error if view nothing' do
