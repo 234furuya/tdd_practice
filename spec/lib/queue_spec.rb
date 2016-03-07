@@ -25,4 +25,13 @@ describe 'Queue Class' do
       expect{ queue.get }.to raise_error(Exception)
     end
   end
+
+  describe '.view' do
+    it 'should view the front item of queue' do
+      queue.add(1)
+      queue.add(2)
+      queue.add(3)
+      expect(queue.view).to eq(1)
+    end
+  end
 end
