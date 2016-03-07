@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'queue'
 
 describe 'Queue Class' do
   let(:queue) { Queue.new }
